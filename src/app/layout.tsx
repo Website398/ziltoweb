@@ -1,4 +1,6 @@
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { AuthProvider } from "@/context/AuthContext";
 
 export default function RootLayout({
   children,
@@ -7,7 +9,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-black text-white">
+
+        <AuthProvider>
+          <Navbar />
+          <main>{children}</main>
+        </AuthProvider>
+
+      </body>
     </html>
   );
 }
