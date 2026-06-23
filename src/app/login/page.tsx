@@ -26,8 +26,9 @@ export default function LoginPage() {
       alert("Login successful 🚀");
 
       router.push("/dashboard");
-    } catch (err: any) {
-      alert(err.message);
+    } catch (err: unknown) {
+      const error = err as Error;
+      alert(error.message);
     } finally {
       setLoading(false);
     }
@@ -36,7 +37,6 @@ export default function LoginPage() {
   return (
     <div className="flex items-center justify-center h-screen bg-black text-white">
       <div className="w-80 p-6 rounded-xl bg-white/5 border border-white/10">
-
         <h1 className="text-2xl font-bold mb-4 text-center">
           Welcome Back
         </h1>
@@ -64,7 +64,7 @@ export default function LoginPage() {
         </button>
 
         <p className="text-sm text-center mt-4 text-gray-400">
-          Don't have account?{" "}
+          Don&apos;t have account?{" "}
           <span
             className="text-blue-400 cursor-pointer"
             onClick={() => router.push("/signup")}
@@ -72,7 +72,6 @@ export default function LoginPage() {
             Sign up
           </span>
         </p>
-
       </div>
     </div>
   );

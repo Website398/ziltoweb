@@ -26,8 +26,9 @@ export default function SignupPage() {
       alert("Account created successfully 🚀");
 
       router.push("/dashboard");
-    } catch (err: any) {
-      alert(err.message);
+    } catch (err: unknown) {
+      const error = err as Error;
+      alert(error.message);
     } finally {
       setLoading(false);
     }
@@ -36,7 +37,6 @@ export default function SignupPage() {
   return (
     <div className="flex items-center justify-center h-screen bg-black text-white">
       <div className="w-80 p-6 rounded-xl bg-white/5 border border-white/10">
-
         <h1 className="text-2xl font-bold mb-4 text-center">
           Create Account
         </h1>
@@ -72,7 +72,6 @@ export default function SignupPage() {
             Login
           </span>
         </p>
-
       </div>
     </div>
   );

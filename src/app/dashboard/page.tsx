@@ -12,7 +12,7 @@ export default function Dashboard() {
     if (!loading && !user) {
       router.push("/login");
     }
-  }, [user, loading]);
+  }, [user, loading, router]);
 
   if (loading) {
     return (
@@ -25,20 +25,14 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-white text-black flex items-center justify-center">
       <div className="text-center p-10">
+        <h1 className="text-4xl font-bold mb-3">🚀 Dashboard</h1>
 
-        <h1 className="text-4xl font-bold mb-3">
-          🚀 Dashboard
-        </h1>
-
-        <p className="text-gray-600 text-lg">
-          Coming Soon...
-        </p>
+        <p className="text-gray-600 text-lg">Coming Soon...</p>
 
         <div className="mt-6 p-4 border rounded-lg shadow-sm">
           <p className="text-sm text-gray-500">Logged in user:</p>
           <p className="font-medium">{user?.email}</p>
         </div>
-
       </div>
     </div>
   );
