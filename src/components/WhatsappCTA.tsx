@@ -6,7 +6,7 @@ export default function WhatsappCTA() {
       <div className="bg-gradient-to-r from-violet-700 via-purple-700 to-violet-900 rounded-3xl p-10 md:p-14 text-center">
 
         <h2 className="text-4xl md:text-5xl font-bold text-white">
-          Let's Build Something Great Together
+          Let&apos;s Build Something Great Together
         </h2>
 
         <p className="text-violet-100 mt-4 max-w-2xl mx-auto">

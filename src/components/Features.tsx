@@ -53,7 +53,7 @@ export default function Features() {
         </h2>
 
         <p className="text-center text-gray-400 mt-3">
-          We don't just build websites, we build online success.
+          We don&apos;t provide service
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
@@ -102,7 +102,7 @@ export default function Features() {
             </h3>
 
             <p className="text-gray-600 mt-3">
-              We're with you even after delivery.
+              We&apos;re with you even after delivery
             </p>
           </div>
 

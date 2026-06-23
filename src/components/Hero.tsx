@@ -50,7 +50,7 @@ export default function Hero() {
             <div>
               <h3 className="font-semibold">Full Support</h3>
               <p className="text-sm text-gray-400">
-                We're Here To Help
+                We&apos;re Here To Help
               </p>
             </div>
 
